@@ -1,0 +1,41 @@
+@import "./colors.scss";
+@import "./assets/styles/typography.scss";
+@import "./assets/styles/global.scss";
+
+html,
+body,
+div#root,
+div#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,19 @@
+#tab-view {
+  ul.react-tabs__tab-list {
+    display: flex;
+    padding: 0px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+
+    li {
+      list-style-type: none;
+      color: var(--gray-2);
+      margin-right: 1.67rem;
+      cursor: pointer;
+    }
+
+    li.react-tabs__tab--selected {
+      color: var(--primary);
+    }
+  }
+}
