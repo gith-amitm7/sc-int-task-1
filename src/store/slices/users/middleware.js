@@ -4,7 +4,7 @@ import {
   loadUsersSuccess,
   loadUsersFailed,
   loadingUsers,
-} from "store/slices/auth/reducer";
+} from "store/slices/users/reducer";
 import { users } from "config/apiEndpoints";
 
 const loadUsersLogic = createLogic({
@@ -17,13 +17,25 @@ const loadUsersLogic = createLogic({
 
     fetch(users)
       .then((res) => {
-        console.log("Users res::", res);
+        res
+          .json()
+          .then((resData) => {
+            console.log("Users res::", resData);
+            dispatch(loadUsersSuccess(resData.results));
+          })
+          .catch((err) => {
+            dispatch(
+              loadUsersFailed(
+                "An internal error occured while reading the response"
+              )
+            );
+          })
+          .finally(() => {
+            done();
+          });
       })
       .catch((err) => {
-        console.log("Users res err::", err);
         dispatch(loadUsersFailed("An error occured"));
-      })
-      .finally(() => {
         done();
       });
   },

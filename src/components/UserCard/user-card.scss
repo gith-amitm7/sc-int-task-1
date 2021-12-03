@@ -1,0 +1,33 @@
+.user-card {
+  width: 10rem;
+  height: 300px;
+  border-radius: 0.33rem;
+  padding: 10px;
+  background-color: var(--white);
+  margin-right: 1.3rem;
+  margin-bottom: 1.3rem;
+
+  h6 {
+    margin: 0;
+    font-weight: unset;
+  }
+
+  .user-img-wrapper {
+    img {
+      width: 100%;
+      border-radius: 0.33rem;
+    }
+  }
+
+  .seperator {
+    margin: 10px 0px;
+    background-color: var(--black);
+    opacity: 0.1;
+    height: 1px;
+    box-sizing: border-box;
+  }
+
+  .typ-address {
+    opacity: 0.5;
+  }
+}

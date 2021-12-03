@@ -1,6 +1,5 @@
 @import "./colors.scss";
 @import "./assets/styles/typography.scss";
-@import "./assets/styles/global.scss";
 
 html,
 body,
@@ -11,7 +10,7 @@ div#app {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
