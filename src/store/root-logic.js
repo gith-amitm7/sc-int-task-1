@@ -1,5 +1,5 @@
-import authLogic from "store/slices/auth/middleware";
+import usersLogic from "store/slices/users/middleware";
 
-const rootLogic = [...authLogic];
+const rootLogic = [...usersLogic];
 
 export default rootLogic;

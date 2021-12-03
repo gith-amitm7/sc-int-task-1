@@ -12,19 +12,10 @@ const App = () => {
   return (
     <div id="app">
       <React.Suspense fallback={<>Loading...</>}>
-        {/* Layout components has header and sidebar pre-fitted in a decided manner,
-          this takes all the header, sidebar and main-content area related stylings &
-          DOMs to one place
-      */}
         <Router>
           <Layout>
             <Routes>
-              {/* Wrapping all secured screens route inside a PrivateRoute */}
-              <Route exact path="/" element={<PrivateRoute />}>
-                <Route exact path="/video" element={<Landing />}></Route>
-              </Route>
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<SignUp />} />
+              <Route exact path="/" element={<Landing />}></Route>
             </Routes>
           </Layout>
         </Router>

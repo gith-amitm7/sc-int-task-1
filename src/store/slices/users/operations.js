@@ -3,6 +3,6 @@
  * Hence operations are actions which would be used directly by
  * desired components
  */
-import { login } from "./reducer";
+import { loadUsers, setSortBy } from "./reducer";
 
-export { login };
+export { loadUsers, setSortBy };
