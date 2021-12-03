@@ -6,13 +6,13 @@ import { ThemeProvider, createTheme } from "@mui/material";
 const theme = createTheme({
   typography: {
     fontFamily: "Jost, sans-serif",
-    fontSize: "0.88rem",
   },
 });
 
 // Lazy loading screens to reduce chunk size
 
 const Landing = React.lazy(() => import("screens/Landing"));
+const PhotoEditor = React.lazy(() => import("screens/PhotoEditor"));
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
             <Layout>
               <Routes>
                 <Route exact path="/" element={<Landing />}></Route>
+                <Route exact path="/task2" element={<PhotoEditor />}></Route>
               </Routes>
             </Layout>
           </Router>

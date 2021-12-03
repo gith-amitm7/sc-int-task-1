@@ -1,9 +1,10 @@
 import React from "react";
+import { formAddress, formFullName } from "utils";
 import "./user-card.scss";
 
 const UserCard = ({ user }) => {
-  const fullName = `${user.name.title} ${user.name.first} ${user.name.last}`;
-  const fullAddress = `${user.location.street.number}, ${user.location.street.name},  ${user.location.city},  ${user.location.state},  ${user.location.country} `;
+  const fullName = formFullName(user);
+  const fullAddress = formAddress(user);
   return (
     <div className="user-card">
       <div className="user-img-wrapper">
