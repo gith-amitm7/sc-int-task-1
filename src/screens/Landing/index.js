@@ -23,8 +23,8 @@ const Landing = () => {
     dispatch(loadUsers());
   }, [dispatch]);
 
-  const handleSortChange = (val) => {
-    dispatch(setSortBy(val));
+  const handleSortChange = (e) => {
+    dispatch(setSortBy(e.target.value));
   };
 
   return (

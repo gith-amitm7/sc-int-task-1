@@ -10,17 +10,18 @@ export const selectSortedUsers = createSelector(
   selectSortByValue,
   (users, sortBy) => {
     if (!sortBy) return users;
-
-    return [...users].sort((a, b) => {
-      let val1 = a[sortBy];
-      let val2 = b[sortBy];
-      if (val1 < val2) {
-        return -1;
-      }
-      if (val1 > val2) {
-        return 1;
-      }
-      return 0;
-    });
+    if (users)
+      return [...users].sort((a, b) => {
+        let val1 = a[sortBy];
+        let val2 = b[sortBy];
+        if (val1 < val2) {
+          return -1;
+        }
+        if (val1 > val2) {
+          return 1;
+        }
+        return 0;
+      });
+    return [];
   }
 );
